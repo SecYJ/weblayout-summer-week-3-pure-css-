@@ -1,0 +1,131 @@
+.product-categories {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.product-categories li {
+	text-align: center;
+	padding-block: 1.5rem;
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	position: relative;
+}
+
+.product-categories li:first-child {
+	border-right-width: 0;
+}
+
+.product-categories li:last-child {
+	border-left-width: 0;
+}
+
+.product-categories li::after {
+	content: "";
+	width: 100%;
+	height: 8px;
+	background-color: transparent;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.product-categories li.active::after,
+.product-categories li:hover::after {
+	background-color: var(--clr-primary-light);
+}
+
+.product-categories a {
+	font-size: 2rem;
+}
+
+.product-banners {
+	min-height: 296px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.product-banner[data-banner="optical-1"] {
+	background-image: url("../images/product-header-1.png");
+}
+
+.product-banner[data-banner="optical-2"] {
+	background-image: url("../images/product-header-2.png");
+}
+
+.product-primary-heading {
+	font-size: 2.625em;
+}
+
+.product-secondary-heading {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.product-primary-heading,
+.product-secondary-heading {
+	text-align: center;
+}
+
+.product-cards {
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5rem 1.5rem;
+	margin-bottom: 5rem;
+}
+
+.product-body {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+.product-body h3 {
+	font-weight: 400;
+	font-size: inherit;
+}
+
+.product-color-btn {
+	border-radius: 0.25rem;
+	width: 24px;
+	height: 24px;
+}
+
+.product-color-btn:first-child {
+	background-color: #5f3e2d;
+}
+
+.product-color-btn:last-child {
+	background-color: #b75929;
+}
+
+@media (max-width: 991px) {
+	.product-cards {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2.5rem 1.5rem;
+	}
+
+	.product-categories li {
+		padding-block: 1rem;
+	}
+
+	.product-categories a {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.product-cards {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.product-categories a {
+		font-size: 1rem;
+	}
+
+	.product-banner[data-banner="optical-1"] {
+		background-image: url("../images/product-header-sm-1.png");
+	}
+
+	.product-banner[data-banner="optical-2"] {
+		background-image: url("../images/product-header-sm-2.png");
+	}
+}

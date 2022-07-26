@@ -1,0 +1,191 @@
+.section {
+	padding-block: 5rem;
+}
+
+.section-title {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.section-title-specialized {
+	margin-bottom: 2rem;
+}
+
+.section-title-spacing {
+	margin-bottom: 3rem;
+}
+
+.section-co-design {
+	background-image: url("../images/index-bg.png");
+}
+
+/* 經典系列鏡框 | 聯名設計鏡框的文字 */
+.section-text {
+	font-size: 3rem;
+}
+
+.banner {
+	min-height: 787px;
+	background-image: url("../images/banner.png");
+	display: grid;
+	align-content: center;
+}
+
+.banner-content {
+	text-align: right;
+}
+
+.primary-heading {
+	font-size: 4rem;
+	margin-bottom: 0.25rem;
+}
+
+.banner-paragraph {
+	font-size: 2.25rem;
+}
+
+.specialized-list span {
+	font-size: 6.25rem;
+	display: block;
+	text-align: center;
+}
+
+.specialized-list h3 {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	color: var(--clr-primary-dark);
+}
+
+/* 經典系列鏡框  */
+.classic-frame-cards {
+	--col: 3;
+}
+
+.classic-frame-cards h3 {
+	font-size: 3rem;
+	font-style: italic;
+	color: var(--clr-primary-light);
+	text-align: center;
+}
+
+.co-design {
+	display: flex;
+}
+
+.co-design h3 {
+	background-color: #fff;
+	text-align: center;
+	padding-block: 0.5rem;
+}
+
+.customer-reviews li {
+	box-shadow: 0px 2px 6px #00000029;
+	border-radius: 0.25rem;
+}
+
+.review-card-body {
+	min-height: 205px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.review-card-body h4 {
+	margin-bottom: 0.5rem;
+}
+
+.review-card-body small {
+	font-size: 14px;
+	color: #707070;
+}
+
+.contact {
+	width: 50%;
+	margin-inline: auto;
+}
+
+.contact-description {
+	font-size: 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
+.classic-frame-cards {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.classic-frame-cards img {
+	min-height: 416px;
+	object-fit: cover;
+}
+
+@media (max-width: 991px) {
+	.classic-frame-cards {
+		grid-template-columns: min-content;
+		justify-content: center;
+	}
+
+	.classic-frame-cards img {
+		min-height: 336px;
+	}
+
+	.section-co-design {
+		background-image: url("../images/index-bg-md.png");
+	}
+
+	.co-design {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.contact {
+		width: 83.33%;
+	}
+
+	.contact-description {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.section {
+		padding-block: 2.5rem;
+	}
+
+	.section-title-spacing {
+		margin-bottom: 1.5rem;
+	}
+
+	.section-co-design {
+		background-image: url("../images/index-bg-sm.png");
+	}
+
+	.banner {
+		min-height: 396px;
+		background-image: url("../images/home-header-sm.png");
+	}
+
+	.banner-paragraph {
+		font-size: 1rem;
+	}
+
+	.primary-heading {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.classic-frame-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.classic-frame-cards img {
+		min-height: 348px;
+	}
+
+	.contact {
+		width: 100%;
+	}
+}

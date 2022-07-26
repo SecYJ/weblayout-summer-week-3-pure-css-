@@ -1,0 +1,38 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li {
+	text-align: center;
+	border: 1px solid #555555;
+	cursor: pointer;
+	color: #555555;
+	transition: all 250ms;
+}
+
+.pagination li:not(:last-child) {
+	border-right-width: 0;
+}
+
+.pagination li:hover,
+.pagination li.active {
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+
+.pagination a {
+	font-size: 18px;
+	padding-block: 0.75rem;
+	padding-inline: 1rem;
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.pagination a {
+		font-size: 1rem;
+		padding-inline: 14px;
+		white-space: nowrap;
+	}
+}

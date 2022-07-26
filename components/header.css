@@ -1,0 +1,16 @@
+.header {
+	position: relative;
+	background-color: var(--clr-primary-light);
+	padding-block: 1rem;
+	color: #fff;
+}
+
+.header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header img {
+	width: 80px;
+}

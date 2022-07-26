@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-primary-light: #aa0601;
+	--clr-primary-dark: #650300;
+	--clr-accent: #fbf2f2;
+}
+
+body {
+	line-height: 1.5;
+	overflow-x: hidden;
+	font-family: "Roboto", "Noto Sans TC", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
