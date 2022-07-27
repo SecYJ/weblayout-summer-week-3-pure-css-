@@ -5,9 +5,8 @@
 
 .pagination li {
 	text-align: center;
-	border: 1px solid #555555;
+	border: 1px solid var(--clr-gray);
 	cursor: pointer;
-	color: #555555;
 	transition: all 250ms;
 }
 

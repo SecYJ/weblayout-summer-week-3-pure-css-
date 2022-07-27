@@ -1,0 +1,9 @@
+.breadcrumb {
+	display: flex;
+	margin-top: 1.5rem;
+}
+
+.breadcrumb a:hover,
+.breadcrumb li.active {
+	color: var(--clr-primary-light);
+}

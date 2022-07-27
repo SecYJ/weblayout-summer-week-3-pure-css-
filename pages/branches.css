@@ -53,6 +53,8 @@
 }
 
 .branches-more-info-btn {
+	display: block;
+	text-align: center;
 	width: 100%;
 	padding-block: 1rem;
 	font-size: 19px;
@@ -67,9 +69,6 @@
 .branches-location {
 	display: flex;
 	gap: 1.5rem;
-	/* display: grid; */
-	/* grid-template-columns: minmax(min(100%, 526px), auto) 
-    1fr; */
 }
 
 .branches-location iframe {
@@ -91,7 +90,6 @@
 	}
 
 	.branches-column {
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: stretch;
 		gap: 1.5rem;

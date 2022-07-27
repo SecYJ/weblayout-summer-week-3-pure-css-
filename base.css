@@ -8,6 +8,7 @@
 	--clr-primary-light: #aa0601;
 	--clr-primary-dark: #650300;
 	--clr-accent: #fbf2f2;
+	--clr-gray: #555;
 }
 
 body {
@@ -46,6 +47,7 @@ button {
 	border: none;
 	outline: none;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 button,

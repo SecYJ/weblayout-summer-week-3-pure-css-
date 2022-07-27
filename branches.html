@@ -15,17 +15,53 @@
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 		/>
 		<link rel="stylesheet" href="./base.css" />
-		<link rel="stylesheet" href="./global.css" />
 		<link rel="stylesheet" href="./components/header.css" />
 		<link rel="stylesheet" href="./components/nav.css" />
-		<link rel="stylesheet" href="./components/form.css" />
 		<link rel="stylesheet" href="./components/footer.css" />
+		<link rel="stylesheet" href="./global.css" />
 		<link rel="stylesheet" href="./pages/branches.css" />
-		<!-- <link rel="stylesheet" href="./styles.css" /> -->
 		<script defer src="./app.js"></script>
 		<title>Branches</title>
 	</head>
 	<body>
+		<header class="header sticky text-white" id="header">
+			<div class="container">
+				<nav>
+					<a href="./index.html">
+						<img src="./images/logo-white.png" alt="logo" />
+					</a>
+					<a href="#" class="nav-menu-btn" id="nav-menu-btn">
+						<span class="material-symbols-outlined">menu</span>
+					</a>
+					<ul class="nav">
+						<li>
+							<a href="./optical.html">系列鏡框</a>
+						</li>
+						<li>
+							<a href="./branches.html">門市據點</a>
+						</li>
+						<li>
+							<a href="./blog.html">部落格</a>
+						</li>
+						<li>
+							<a href="./faq.html">常見問題</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- backdrop -> when mobile menu open -->
+		<div class="backdrop" id="backdrop"></div>
+
+		<!-- mobile menu -->
+		<ul class="nav-mobile bg-primary-light text-white" id="nav-mobile">
+			<li><a href="./optical.html">系列鏡框</a></li>
+			<li><a href="#">門市據點</a></li>
+			<li><a href="./blog.html">部落格</a></li>
+			<li><a href="./faq.html">常見問題</a></li>
+		</ul>
+
 		<main>
 			<section class="layout">
 				<div class="container">
@@ -68,12 +104,12 @@
 									地址：台北市中山區南京東路25巷2-1號
 								</li>
 							</ul>
-							<button
-								type="button"
+							<a
+								href="./branchesLocation.html"
 								class="branches-more-info-btn text-white"
 							>
 								詳細資訊
-							</button>
+							</a>
 						</li>
 						<li>
 							<img src="./images/store-2.png" alt="台北綠園店" />
@@ -100,12 +136,12 @@
 									地址：台北市中正區復興南路 132-1 號
 								</li>
 							</ul>
-							<button
-								type="button"
+							<a
+								href="./branchesLocation.html"
 								class="branches-more-info-btn text-white"
 							>
 								詳細資訊
-							</button>
+							</a>
 						</li>
 						<li>
 							<img
@@ -135,12 +171,12 @@
 									地址：台中市清水區經南一路 23 號 8 樓
 								</li>
 							</ul>
-							<button
-								type="button"
+							<a
+								href="./branchesLocation.html"
 								class="branches-more-info-btn text-white"
 							>
 								詳細資訊
-							</button>
+							</a>
 						</li>
 						<li>
 							<img
@@ -170,12 +206,12 @@
 									地址：高雄市苓雅區中正路 38 號 12 樓
 								</li>
 							</ul>
-							<button
-								type="button"
+							<a
+								href="./branchesLocation.html"
 								class="branches-more-info-btn text-white"
 							>
 								詳細資訊
-							</button>
+							</a>
 						</li>
 						<li>
 							<img
@@ -205,12 +241,12 @@
 									地址：高雄市苓雅區中正路 38 號 12 樓
 								</li>
 							</ul>
-							<button
-								type="button"
+							<a
+								href="./branchesLocation.html"
 								class="branches-more-info-btn text-white"
 							>
 								詳細資訊
-							</button>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -220,16 +256,13 @@
 		<footer class="footer text-white">
 			<div class="container">
 				<div class="footer-top grid">
-					<!-- footer nav -->
 					<ul class="footer-nav">
 						<li><a href="#">首頁</a></li>
-						<li><a href="#">系列鏡框</a></li>
-						<li><a href="#">門市據點</a></li>
-						<li><a href="#">部落格</a></li>
-						<li><a href="#">常見問題</a></li>
+						<li><a href="./optical.html">系列鏡框</a></li>
+						<li><a href="./branches.html">門市據點</a></li>
+						<li><a href="./blog.html">部落格</a></li>
+						<li><a href="./faq.html">常見問題</a></li>
 					</ul>
-
-					<!-- footer contacts -->
 					<ul class="footer-contacts">
 						<li>
 							<span class="material-symbols-outlined">
@@ -246,8 +279,6 @@
 							>
 						</li>
 					</ul>
-
-					<!-- social links -->
 					<ul class="footer-social-links">
 						<li>
 							<a href="#"

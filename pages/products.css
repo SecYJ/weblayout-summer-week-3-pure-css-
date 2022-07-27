@@ -50,6 +50,14 @@
 	background-image: url("../images/product-header-2.png");
 }
 
+.product-banner[data-banner="sunglasses-1"] {
+	background-image: url("../images/product-header-3.png");
+}
+
+.product-banner[data-banner="sunglasses-2"] {
+	background-image: url("../images/product-header-4.png");
+}
+
 .product-primary-heading {
 	font-size: 2.625em;
 }
@@ -64,14 +72,19 @@
 	text-align: center;
 }
 
-.product-cards {
+.product-cards[data-categories="optical"] {
 	grid-template-columns: repeat(4, 1fr);
 	gap: 5rem 1.5rem;
 	margin-bottom: 5rem;
 }
 
+.product-cards[data-categories="sunglasses"] {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem 1.5rem;
+	margin-bottom: 5rem;
+}
+
 .product-body {
-	display: grid;
 	grid-template-columns: 1fr auto;
 	align-items: center;
 	font-size: 1.5rem;
@@ -97,7 +110,8 @@
 }
 
 @media (max-width: 991px) {
-	.product-cards {
+	.product-cards[data-categories="optical"],
+	.product-cards[data-categories="sunglasses"] {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2.5rem 1.5rem;
 	}
@@ -112,7 +126,8 @@
 }
 
 @media (max-width: 767px) {
-	.product-cards {
+	.product-cards[data-categories="optical"],
+	.product-cards[data-categories="sunglasses"] {
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
 	}
@@ -127,5 +142,13 @@
 
 	.product-banner[data-banner="optical-2"] {
 		background-image: url("../images/product-header-sm-2.png");
+	}
+
+	.product-banner[data-banner="sunglasses-1"] {
+		background-image: url("../images/product-header-sm-3.png");
+	}
+
+	.product-banner[data-banner="sunglasses-2"] {
+		background-image: url("../images/product-header-sm-4.png");
 	}
 }

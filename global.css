@@ -1,8 +1,7 @@
 /* For javascript control */
 .disabled-scrolling {
-	position: fixed;
-	inset: 0;
-	overflow-y: scroll;
+	overflow: hidden;
+	padding-right: 17px;
 }
 /* js control end */
 
@@ -26,20 +25,6 @@
 	border-color: #fff;
 }
 
-@media (max-width: 991px) {
-	.container {
-		max-width: 768px;
-		padding-inline: 2.25rem;
-	}
-}
-
-@media (max-width: 767px) {
-	.container {
-		max-width: 375px;
-		padding-inline: 0.75rem;
-	}
-}
-
 /* utilities */
 .text-primary-light {
 	color: var(--clr-primary-light);
@@ -53,6 +38,10 @@
 	color: #fff;
 }
 
+.text-gray {
+	color: #555;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -62,7 +51,7 @@
 }
 
 .bg-primary-dark {
-    background-color: var(--clr-primary-dark);
+	background-color: var(--clr-primary-dark);
 }
 
 .bg-accent {
@@ -120,7 +109,23 @@
 	background-position: center;
 }
 
+.sticky {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.section {
+	padding-block: 5rem;
+}
+
 @media (max-width: 991px) {
+	.container {
+		max-width: 768px;
+		padding-inline: 2.25rem;
+	}
+
 	.grid-cols {
 		--col: 2;
 	}
@@ -135,6 +140,15 @@
 }
 
 @media (max-width: 767px) {
+	.container {
+		max-width: 375px;
+		padding-inline: 0.75rem;
+	}
+
+	.section {
+		padding-block: 2.5rem;
+	}
+
 	.layout {
 		padding-top: 2.5rem;
 		padding-bottom: 4rem;
@@ -151,5 +165,22 @@
 
 	.grid-cols {
 		--col: 1;
+	}
+
+	.backdrop {
+		pointer-events: none;
+		background-color: #000;
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 150ms;
+		padding-right: 17px;
+	}
+
+	.backdrop.show {
+		opacity: 0.5;
+		z-index: 1;
+		pointer-events: all;
 	}
 }

@@ -2,7 +2,6 @@
 	position: relative;
 	background-color: var(--clr-primary-light);
 	padding-block: 1rem;
-	color: #fff;
 }
 
 .header nav {

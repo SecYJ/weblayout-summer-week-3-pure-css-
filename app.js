@@ -1,22 +1,24 @@
 const header = document.querySelector("#header");
 const banner = document.querySelector("#banner");
+const backdrop = document.querySelector("#backdrop");
+const navMobile = document.querySelector("#nav-mobile");
+const body = document.body;
 
 header.addEventListener("click", (e) => {
-	if (e.target.closest("#nav-menu-btn")) {
-		document.querySelector("#backdrop").classList.toggle("show");
-		document.querySelector("#nav-mobile").classList.toggle("open");
-		document.body.classList.add("disabled-scrolling");
-	}
+	if (!e.target.closest("#nav-menu-btn")) return;
+	e.preventDefault();
+	e.stopPropagation();
+	backdrop.classList.add("show");
+	navMobile.classList.add("open");
+	body.classList.add("disabled-scrolling");
 });
-
-// intersection observer for navbar
 
 const observerOption = {
 	threshold: 0,
 	rootMargin: "-80px",
 };
 
-let observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries, observer) => {
 	entries.forEach((entry) => {
 		const { isIntersecting } = entry;
 		if (!isIntersecting) {
@@ -27,44 +29,27 @@ let observer = new IntersectionObserver((entries, observer) => {
 	});
 }, observerOption);
 
-observer.observe(banner);
+banner ? observer.observe(banner) : "";
 
 const closeEvent = (e) => {
-	// console.log(e.target);
-	// console.log(!e.target.closest("#nav-mobile"));
-	// console.log("hi");
-	if (!e.target.closest("#nav-mobile")) {
-		document.querySelector("#backdrop").classList.remove("show");
-		document.body.classList.remove("disabled-scrolling");
-		document.querySelector("#nav-mobile").classList.remove("open");
-	}
+	if (e.target.closest("#nav-mobile")) return;
+	backdrop.classList.remove("show");
+	navMobile.classList.remove("open");
+	body.classList.remove("disabled-scrolling");
+	body.removeEventListener("click", closeEvent);
 };
 
 // mutation observer for observing DOM changes
-const targetNode = document.body;
 const config = { attributes: true, childList: false, subtree: false };
-
 const callback = (mutationList, observer) => {
-	const navMobile = document.querySelector("#nav-mobile");
 	for (const mutation of mutationList) {
 		const { target } = mutation;
-		// if (target.classList.contains("disabled-scrolling")) {
-		// 	document.body.addEventListener("click", closeEvent, {
-		// 		capture: true,
-		// 	});
-		// } else {
-		// 	document.body.removeEventListener("click", closeEvent);
-		// }
-		// if (!target.classList.contains("disabled-scrolling")) return;
 		if (target.classList.contains("disabled-scrolling")) {
-			document.body.addEventListener("click", closeEvent);
-			// console.log(target);
-			document.body.addEventListener("click", closeEvent);
-		} else {
-			document.body.removeEventListener("click", closeEvent);
+			target.addEventListener("click", closeEvent);
+			return;
 		}
+		target.removeEventListener("click", closeEvent);
 	}
 };
-
 const obs = new MutationObserver(callback);
-obs.observe(targetNode, config);
+obs.observe(document.body, config);
