@@ -59,24 +59,3 @@
 	place-content: center;
 	content: "\2713";
 }
-
-.btn[data-btn="form-submit"] {
-	width: calc(100% / 6 * 4);
-	display: block;
-	margin-inline: auto;
-	margin-top: 3rem;
-	padding-block: 1rem;
-	white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-	.btn[data-btn="form-submit"] {
-		width: calc(100% / 10 * 6);
-	}
-}
-
-@media (max-width: 767px) {
-	.btn[data-btn="form-submit"] {
-		width: 100%;
-	}
-}

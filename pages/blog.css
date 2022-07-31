@@ -45,15 +45,6 @@
 	font-size: 1.25rem;
 }
 
-.blog-more-md-btn {
-	display: none;
-}
-
-.blog-more-lg-btn {
-	grid-area: more;
-	font-size: 2.25rem;
-}
-
 @media (max-width: 991px) {
 	.blog:not(:last-child) {
 		margin-bottom: 1.5rem;
@@ -70,14 +61,6 @@
 	.blog-article p {
 		margin-top: 0.25rem;
 		font-size: 1rem;
-	}
-
-	.blog-more-md-btn {
-		display: inline-block;
-	}
-
-	.blog-more-lg-btn {
-		display: none;
 	}
 }
 

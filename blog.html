@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="./base.css" />
 		<link rel="stylesheet" href="./components/header.css" />
 		<link rel="stylesheet" href="./components/nav.css" />
+		<link rel="stylesheet" href="./components/btn.css" />
 		<link rel="stylesheet" href="./components/footer.css" />
 		<link rel="stylesheet" href="./global.css" />
 		<link rel="stylesheet" href="./pages/blog.css" />
@@ -36,16 +37,16 @@
 					</a>
 					<ul class="nav">
 						<li>
-							<a href="./optical.html">系列鏡框</a>
+							<a href="./optical.html" class="link">系列鏡框</a>
 						</li>
 						<li>
-							<a href="./branches.html">門市據點</a>
+							<a href="./branches.html" class="link">門市據點</a>
 						</li>
 						<li>
-							<a href="./blog.html">部落格</a>
+							<a href="./blog.html" class="link">部落格</a>
 						</li>
 						<li>
-							<a href="./faq.html">常見問題</a>
+							<a href="./faq.html" class="link">常見問題</a>
 						</li>
 					</ul>
 				</nav>
@@ -68,13 +69,17 @@
 				<nav class="sub-nav">
 					<ul class="sub-nav-menu">
 						<li>
-							<a href="#" class="text-white fw-bold">最新消息</a>
+							<a href="#" class="link text-white fw-bold"
+								>最新消息</a
+							>
 						</li>
 						<li>
-							<a href="#" class="text-white fw-bold">特別企劃</a>
+							<a href="#" class="link text-white fw-bold"
+								>特別企劃</a
+							>
 						</li>
 						<li>
-							<a href="#" class="text-white fw-bold"
+							<a href="#" class="link text-white fw-bold"
 								>鏡框小知識</a
 							>
 						</li>
@@ -103,14 +108,16 @@
 							一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！即日起至2/16為止，不論是熱戀情侶、自由自在一個人或是老夫老妻，只要從未來過本店的新朋友，綁定官方LINE好友，都可享專屬優惠⋯⋯
 							<a
 								href="./blogDetails.html"
-								class="blog-more-md-btn text-gray"
+								class="btn text-gray"
+								data-btn="blog-more-md"
 							>
 								more
 							</a>
 						</p>
 						<a
 							href="./blogDetails.html"
-							class="blog-more-lg-btn fw-black text-primary-dark"
+							class="btn fw-black text-primary-dark"
+							data-btn="blog-more-lg"
 						>
 							MORE
 						</a>
@@ -131,14 +138,16 @@
 							3 款單品，讓你瞬間帥氣爆棚散發型男品味⋯⋯
 							<a
 								href="./blogDetails.html"
-								class="blog-more-md-btn text-gray"
+								class="btn text-gray"
+								data-btn="blog-more-md"
 							>
 								more
 							</a>
 						</p>
 						<a
 							href="./blogDetails.html"
-							class="blog-more-lg-btn fw-black text-primary-dark"
+							class="btn fw-black text-primary-dark"
+							data-btn="blog-more-lg"
 						>
 							MORE
 						</a>
@@ -157,14 +166,16 @@
 							年春季的光學眼鏡跳脫前幾季流行的復古框型，比起圓框與小方框等文青風格，偏向個性款式的眉框眼鏡成為這一季的耀眼之星。除了經典款式如黑色眉框落在長方形鏡面上，眉宇之間露出專業莊重的特殊氣質，包覆在圓形鏡框上的貓眼型眉框則是強調出特殊設計感，俐落時髦的造型搭配一件簡單的白襯衫就相當有型，是喜愛時尚質感人士絕不能錯過的必備款式⋯⋯
 							<a
 								href="./blogDetails.html"
-								class="blog-more-md-btn text-gray"
+								class="btn text-gray"
+								data-btn="blog-more-md"
 							>
 								more
 							</a>
 						</p>
 						<a
 							href="./blogDetails.html"
-							class="blog-more-lg-btn fw-black text-primary-dark"
+							class="btn fw-black text-primary-dark"
+							data-btn="blog-more-lg"
 						>
 							MORE
 						</a>
@@ -185,14 +196,16 @@
 							一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！即日起至2/16為止，不論是熱戀情侶、自由自在一個人或是老夫老妻，只要從未來過本店的新朋友，綁定官方LINE好友，都可享專屬優惠⋯⋯
 							<a
 								href="./blogDetails.html"
-								class="blog-more-md-btn text-gray"
+								class="btn text-gray"
+								data-btn="blog-more-md"
 							>
 								more
 							</a>
 						</p>
 						<a
 							href="./blogDetails.html"
-							class="blog-more-lg-btn fw-black text-primary-dark"
+							class="btn fw-black text-primary-dark"
+							data-btn="blog-more-lg"
 						>
 							MORE
 						</a>
@@ -214,14 +227,16 @@
 							年春季的光學眼鏡跳脫前幾季流行的復古框型，比起圓框與小方框等文青風格，偏向個性款式的眉框眼鏡成為這一季的耀眼之星。除了經典款式如黑色眉框落在長方形鏡面上，眉宇之間露出專業莊重的特殊氣質，包覆在圓形鏡框上的貓眼型眉框則是強調出特殊設計感，俐落時髦的造型搭配一件簡單的白襯衫就相當有型，是喜愛時尚質感人士絕不能錯過的必備款式⋯⋯
 							<a
 								href="./blogDetails.html"
-								class="blog-more-md-btn text-gray"
+								class="btn text-gray"
+								data-btn="blog-more-md"
 							>
 								more
 							</a>
 						</p>
 						<a
 							href="./blogDetails.html"
-							class="blog-more-lg-btn fw-black text-primary-dark"
+							class="btn fw-black text-primary-dark"
+							data-btn="blog-more-lg"
 						>
 							MORE
 						</a>
@@ -234,11 +249,15 @@
 			<div class="container">
 				<div class="footer-top grid">
 					<ul class="footer-nav">
-						<li><a href="#">首頁</a></li>
-						<li><a href="./optical.html">系列鏡框</a></li>
-						<li><a href="./branches.html">門市據點</a></li>
-						<li><a href="./blog.html">部落格</a></li>
-						<li><a href="./faq.html">常見問題</a></li>
+						<li><a href="#" class="link">首頁</a></li>
+						<li>
+							<a href="./optical.html" class="link">系列鏡框</a>
+						</li>
+						<li>
+							<a href="./branches.html" class="link">門市據點</a>
+						</li>
+						<li><a href="./blog.html" class="link">部落格</a></li>
+						<li><a href="./faq.html" class="link">常見問題</a></li>
 					</ul>
 					<ul class="footer-contacts">
 						<li>
@@ -258,7 +277,7 @@
 					</ul>
 					<ul class="footer-social-links">
 						<li>
-							<a href="#"
+							<a href="#" class="foot-head"
 								><img
 									src="./images/ic_social_fb.png"
 									alt="facebook"

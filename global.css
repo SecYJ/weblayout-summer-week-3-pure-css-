@@ -8,7 +8,7 @@
 .container {
 	max-width: 1320px;
 	width: 100%;
-	padding-inline: 1.5rem;
+	padding-inline: 0.75rem;
 	margin-inline: auto;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .link {
-	border-bottom: 1px solid transparent;
+	border-bottom: 2px solid transparent;
 	transition: border 200ms ease-in-out;
 }
 
@@ -56,6 +56,14 @@
 
 .bg-accent {
 	background-color: var(--clr-accent);
+}
+
+.bg-brown {
+	background-color: #5f3e2d;
+}
+
+.bg-amber {
+	background-color: #b75929;
 }
 
 .fw-normal {
@@ -120,10 +128,14 @@
 	padding-block: 5rem;
 }
 
+.btn-hover {
+	transition: background-color 400ms;
+	/* to be continued */
+}
+
 @media (max-width: 991px) {
 	.container {
-		max-width: 768px;
-		padding-inline: 2.25rem;
+		max-width: 720px;
 	}
 
 	.grid-cols {
@@ -142,7 +154,6 @@
 @media (max-width: 767px) {
 	.container {
 		max-width: 375px;
-		padding-inline: 0.75rem;
 	}
 
 	.section {
@@ -172,7 +183,7 @@
 		background-color: #000;
 		position: fixed;
 		inset: 0;
-		z-index: -1;
+		z-index: 1;
 		opacity: 0;
 		transition: opacity 150ms;
 		padding-right: 17px;
@@ -180,7 +191,6 @@
 
 	.backdrop.show {
 		opacity: 0.5;
-		z-index: 1;
 		pointer-events: all;
 	}
 }

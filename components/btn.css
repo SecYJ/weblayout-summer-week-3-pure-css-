@@ -1,0 +1,66 @@
+.btn {
+	transition: opacity 400ms;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn[data-btn="banner"] {
+	padding: 6px 0.75rem;
+	background-color: var(--clr-primary-light);
+	font-size: 1.25rem;
+}
+
+.btn[data-btn="form-submit"] {
+	width: calc(100% / 6 * 4);
+	display: block;
+	margin-inline: auto;
+	margin-top: 3rem;
+	padding-block: 1rem;
+	white-space: nowrap;
+}
+
+.btn[data-btn="product-color-select"] {
+	border-radius: 0.25rem;
+	width: 24px;
+	height: 24px;
+}
+
+.btn[data-btn="branches-more-info"] {
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding-block: 1rem;
+	font-size: 19px;
+	background-color: #000;
+}
+
+.btn[data-btn="blog-more-md"] {
+	display: none;
+}
+
+.btn[data-btn="blog-more-lg"] {
+	grid-area: more;
+	font-size: 2.25rem;
+}
+
+@media (max-width: 991px) {
+	.btn[data-btn="blog-more-md"] {
+		display: inline-block;
+	}
+
+	.btn[data-btn="blog-more-lg"] {
+		display: none;
+	}
+
+	.btn[data-btn="form-submit"] {
+		width: calc(100% / 10 * 6);
+	}
+}
+
+@media (max-width: 767px) {
+	.btn[data-btn="form-submit"] {
+		width: 100%;
+	}
+}

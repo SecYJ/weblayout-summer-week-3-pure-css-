@@ -25,6 +25,15 @@
 	gap: 2rem;
 }
 
+.footer-social-links a {
+	display: block;
+	transition: transform 250ms ease-in-out;
+}
+
+.footer-social-links a:hover {
+	transform: translateY(-3px);
+}
+
 .footer-social-links img {
 	width: 48px;
 	height: 48px;

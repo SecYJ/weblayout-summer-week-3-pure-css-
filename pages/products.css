@@ -4,7 +4,6 @@
 
 .product-categories li {
 	text-align: center;
-	padding-block: 1.5rem;
 	border: 1px solid #dcdcdc;
 	cursor: pointer;
 	position: relative;
@@ -35,6 +34,8 @@
 
 .product-categories a {
 	font-size: 2rem;
+	padding-block: 1.5rem;
+	display: block;
 }
 
 .product-banners {
@@ -93,20 +94,6 @@
 .product-body h3 {
 	font-weight: 400;
 	font-size: inherit;
-}
-
-.product-color-btn {
-	border-radius: 0.25rem;
-	width: 24px;
-	height: 24px;
-}
-
-.product-color-btn:first-child {
-	background-color: #5f3e2d;
-}
-
-.product-color-btn:last-child {
-	background-color: #b75929;
 }
 
 @media (max-width: 991px) {

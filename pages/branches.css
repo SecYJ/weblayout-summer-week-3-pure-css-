@@ -17,8 +17,7 @@
 .branches-selection select {
 	font-size: 18px;
 	line-height: 1.44;
-	padding-block: 0.375rem;
-	padding-inline: 0.75rem;
+	padding: 0.375rem 0.75rem;
 	min-width: 304px;
 	color: #495057;
 	border: 1px solid #ced4da;
@@ -50,20 +49,6 @@
 
 .branches-card-body li:not(:last-child) {
 	margin-bottom: 0.5rem;
-}
-
-.branches-more-info-btn {
-	display: block;
-	text-align: center;
-	width: 100%;
-	padding-block: 1rem;
-	font-size: 19px;
-	background-color: #000;
-	transition: background-color 400ms;
-}
-
-.branches-more-info-btn:hover {
-	background-color: rgba(0 0 0 / 0.8);
 }
 
 .branches-location {
